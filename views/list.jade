@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  a(href="/persons/new") Add Person 
+  h1 Contacts
+  ul
+    - for (var i = 0; i < persons.length; ++i) {
+      li= persons[i]._source.first_name + ' ' + persons[i]._source.surname + '&nbsp;'
+        a(href="/persons/show/" + persons[i]._id ) Detail
+        &nbsp;
+        a(href="/persons/edit/" + persons[i]._id ) Edit 
+    - }

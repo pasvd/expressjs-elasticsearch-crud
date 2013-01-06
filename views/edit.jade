@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  form(method="post", class="four columns centered panel")
+    label(for="first_name", class="subheader") First name
+    input(type="text", name="first_name", id='first_name', value=person._source.first_name)
+    label(for="surname", class="subheader") Surname
+    input(type="text", name="surname", id='surname', value=person._source.surname)
+    input(type="hidden", name="id", id='id', value=person._id)
+    input(type="hidden", name="_method", value="put")
+    input(type="submit", value="Update", class="medium button")

@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  form(method="post", class="four columns centered panel")
+    label(for="first_name", class="subheader") First name
+    input(type="text", name="first_name", id='first_name')
+    label(for="surname", class="subheader") Surname
+    input(type="text", name="surname", id='surname')    
+    input(type="submit", value="Add", class="medium button")

@@ -1,0 +1,6 @@
+extends layout
+
+block content
+  h1= 'Contact detail'
+  h4= person._source.first_name + ' ' + person._source.surname 
+  a(href="/persons" ) List
